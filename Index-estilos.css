@@ -1,0 +1,188 @@
+
+@import url('https://googleapis.com');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-image: url('Fotos/benjamin-franklin-fondo.jpg');
+    background-size: cover;
+    background-position: center 50px; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+nav {
+    width: 100%;          
+    background-color: #333;
+    font-size: 18px;
+    position: absolute;   
+    top: 0;               
+    left: 0;              
+    z-index: 1000;        
+}
+
+.menu-horizontal {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-horizontal > li {
+    position: relative;
+    flex: 1;
+    text-align: center;
+}
+
+.menu-horizontal > li > a {
+    display: block;
+    padding: 20px 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.menu-horizontal > li:hover {
+    background-color: red;
+}
+
+
+.menu-vertical {
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .75); 
+    left: 0;
+    top: 100%;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.menu-horizontal li:hover .menu-vertical {
+    display: block;
+}
+
+.menu-vertical li:hover {
+    background-color: black;
+}
+
+.menu-vertical li a {
+    display: block;
+    color: white;
+    padding: 12px 15px;
+    text-decoration: none;
+    text-align: left;
+    font-size: 15px;
+}
+
+
+.contenedor-principal {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    min-height: calc(100vh - 50px); 
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+.caja-texto {
+    position: absolute;      
+    top: 240px;              
+    right: 50px;             
+    width: 550px;            
+    
+   
+    background: rgba(0, 0, 0, 0.75); 
+    
+    padding: 35px 40px;      
+    border-radius: 12px;    
+    color: white;            
+    
+    
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.7); 
+    
+  
+    border-left: 5px solid red; 
+}
+
+.caja-texto h1 {
+    font-size: 32px;         
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.caja-texto .fechas {
+    color: #cccccc;          
+    font-size: 16px;
+    margin-bottom: 20px;     
+}
+
+.caja-texto .frase {
+    font-size: 20px;          
+    line-height: 1.6;         
+    color: #f1c40f;           
+    font-style: italic;       
+    display: block;
+}
+
+.enlace-boton {
+    text-decoration: none;
+    display: block;
+    margin-top: 20px;
+}
+
+.super-boton {
+    border: 0;
+    background-image: linear-gradient(150deg, #9500ff, #09f, #00DDFF);
+    border-radius: 8px;
+    color: #fff;
+    display: flex;
+    font-size: 16px;
+    padding: 4px;
+    cursor: pointer;
+    transition: .3s;
+    width: 100%;
+    justify-content: center;
+}
+
+.super-boton span {
+    background-color: #111;
+    padding: 16px 24px;
+    border-radius: 6px;
+    transition: .3s;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+.super-boton:hover span {
+    background: none;
+}
+
+.super-boton:active {
+    transform: scale(0.9);
+}
+
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .caja-texto {
+        width: 320px;
+        right: 20px;
+        padding: 30px 20px;
+    }
+    .caja-texto .frase {
+        font-size: 17px;
+    }
+}
+
+
+
